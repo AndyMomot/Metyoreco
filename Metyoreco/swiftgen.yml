@@ -1,0 +1,31 @@
+strings:
+  inputs:
+    - Metyoreco/Resources/Localization
+  outputs:
+    - templateName: structured-swift5
+      output: Metyoreco/Resources/Localization/Strings.generated.swift
+      params:
+        enumName: Strings
+
+xcassets:
+  - inputs:
+    - Metyoreco/Resources/Images
+    outputs:
+      - templateName: swift5
+        output: Metyoreco/Resources/Images/Images.generated.swift
+  - inputs:
+    - Metyoreco/Resources/Colors/Colors.xcassets
+    outputs:
+      - templateName: swift5
+        output: Metyoreco/Resources/Colors/Colors.generated.swift
+        params:
+          enumName: Colors
+          
+fonts:
+  - inputs: Metyoreco/Resources/Fonts
+    outputs:
+    - templateName: swift5
+      output: Metyoreco/Resources/Fonts/Fonts.generated.swift
+      params:
+        enumName: Fonts
+
