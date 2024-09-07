@@ -18,36 +18,39 @@ struct HomeView: View {
                     .resizable()
                     .ignoresSafeArea()
                 
-                ScrollView {
-                    VStack(spacing: 38) {
-                        HStack {
-                            NavigationTitleView(text: "Menu główne")
-                            Spacer()
-                        }
-                        
-                        if let user = viewModel.user {
-                            UserView(model: user) {
-                                viewModel.showEditUser.toggle()
-                            }
-                        } else {
-                            CreateUserHomeButton {
-                                viewModel.showCreateUser.toggle()
-                            }
-                        }
-                        
-                        HomeButton(type: .createProject) {
-                            
-                        }
-                        HomeButton(type: .calculatingProfit) {
-                            
-                        }
-                        HomeButton(type: .customers) {
-                            
-                        }
+                VStack(spacing: 50) {
+                    HStack {
+                        NavigationTitleView(text: "Menu główne")
+                        Spacer()
                     }
                     .padding(.horizontal)
+                    
+                    ScrollView {
+                        VStack(spacing: 38) {
+                            if let user = viewModel.user {
+                                UserView(model: user) {
+                                    viewModel.showEditUser.toggle()
+                                }
+                            } else {
+                                CreateUserHomeButton {
+                                    viewModel.showCreateUser.toggle()
+                                }
+                            }
+                            
+                            HomeButton(type: .createProject) {
+                                
+                            }
+                            HomeButton(type: .calculatingProfit) {
+                                
+                            }
+                            HomeButton(type: .customers) {
+                                
+                            }
+                        }
+                        .padding(.horizontal)
+                    }
+                    .scrollIndicators(.never)
                 }
-                .scrollIndicators(.never)
             }
             .onAppear {
                 withAnimation {

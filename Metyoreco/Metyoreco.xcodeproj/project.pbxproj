@@ -25,6 +25,10 @@
 		47BF41212C8C79B9006B1642 /* ProfileImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF41202C8C79B9006B1642 /* ProfileImagePickerView.swift */; };
 		47BF41242C8C81F3006B1642 /* NextButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF41232C8C81F3006B1642 /* NextButtonView.swift */; };
 		47BF41262C8C8BEF006B1642 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF41252C8C8BEF006B1642 /* UserView.swift */; };
+		47BF412A2C8C95DA006B1642 /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF41292C8C95DA006B1642 /* SettingsButton.swift */; };
+		47BF412D2C8C9BC0006B1642 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF412C2C8C9BC0006B1642 /* NotificationsView.swift */; };
+		47BF412F2C8C9BC6006B1642 /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF412E2C8C9BC6006B1642 /* NotificationsViewModel.swift */; };
+		47BF41322C8C9D69006B1642 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF41312C8C9D69006B1642 /* NotificationManager.swift */; };
 		47F874242C8A0EB3000DB7AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F874232C8A0EB3000DB7AB /* AppDelegate.swift */; };
 		47F874262C8A0EB3000DB7AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F874252C8A0EB3000DB7AB /* SceneDelegate.swift */; };
 		47F874282C8A0EB3000DB7AB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F874272C8A0EB3000DB7AB /* RootViewController.swift */; };
@@ -97,6 +101,10 @@
 		47BF41202C8C79B9006B1642 /* ProfileImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImagePickerView.swift; sourceTree = "<group>"; };
 		47BF41232C8C81F3006B1642 /* NextButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonView.swift; sourceTree = "<group>"; };
 		47BF41252C8C8BEF006B1642 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		47BF41292C8C95DA006B1642 /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		47BF412C2C8C9BC0006B1642 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		47BF412E2C8C9BC6006B1642 /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
+		47BF41312C8C9D69006B1642 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		47F874202C8A0EB3000DB7AB /* Metyoreco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metyoreco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F874232C8A0EB3000DB7AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F874252C8A0EB3000DB7AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,7 +176,7 @@
 			children = (
 				47BF40EA2C8B4809006B1642 /* HomeTab */,
 				47BF40EF2C8C5D53006B1642 /* Music */,
-				47BF40F42C8C5F0A006B1642 /* Settings */,
+				47BF40F42C8C5F0A006B1642 /* SettingsTab */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -191,13 +199,13 @@
 			path = Music;
 			sourceTree = "<group>";
 		};
-		47BF40F42C8C5F0A006B1642 /* Settings */ = {
+		47BF40F42C8C5F0A006B1642 /* SettingsTab */ = {
 			isa = PBXGroup;
 			children = (
-				47BF40F72C8C5F36006B1642 /* SettingsView.swift */,
-				47BF40F92C8C5F3E006B1642 /* SettingsViewModel.swift */,
+				47BF41272C8C9544006B1642 /* Settings */,
+				47BF412B2C8C9BB1006B1642 /* Notifications */,
 			);
-			path = Settings;
+			path = SettingsTab;
 			sourceTree = "<group>";
 		};
 		47BF41082C8C632D006B1642 /* NavigationTitle */ = {
@@ -276,6 +284,41 @@
 				47BF41232C8C81F3006B1642 /* NextButtonView.swift */,
 			);
 			path = NextButton;
+			sourceTree = "<group>";
+		};
+		47BF41272C8C9544006B1642 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				47BF41282C8C95CD006B1642 /* Views */,
+				47BF40F72C8C5F36006B1642 /* SettingsView.swift */,
+				47BF40F92C8C5F3E006B1642 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		47BF41282C8C95CD006B1642 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47BF41292C8C95DA006B1642 /* SettingsButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		47BF412B2C8C9BB1006B1642 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				47BF412C2C8C9BC0006B1642 /* NotificationsView.swift */,
+				47BF412E2C8C9BC6006B1642 /* NotificationsViewModel.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		47BF41302C8C9D60006B1642 /* NotificationManager */ = {
+			isa = PBXGroup;
+			children = (
+				47BF41312C8C9D69006B1642 /* NotificationManager.swift */,
+			);
+			path = NotificationManager;
 			sourceTree = "<group>";
 		};
 		47F874172C8A0EB3000DB7AB = {
@@ -424,6 +467,7 @@
 		47F874582C8A103F000DB7AB /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				47BF41302C8C9D60006B1642 /* NotificationManager */,
 				47BF41192C8C794E006B1642 /* FileManager */,
 				47F874592C8A103F000DB7AB /* Defaults */,
 			);
@@ -650,6 +694,7 @@
 				47F8743C2C8A0FF9000DB7AB /* RootContentViewModel.swift in Sources */,
 				47BF410D2C8C64F0006B1642 /* HomeButton.swift in Sources */,
 				47BF410A2C8C633E006B1642 /* NavigationTitleView.swift in Sources */,
+				47BF41322C8C9D69006B1642 /* NotificationManager.swift in Sources */,
 				47F874282C8A0EB3000DB7AB /* RootViewController.swift in Sources */,
 				47F874C32C8A1792000DB7AB /* PreloaderView.swift in Sources */,
 				47F8746B2C8A103F000DB7AB /* Double+Additions.swift in Sources */,
@@ -658,7 +703,9 @@
 				47BF41262C8C8BEF006B1642 /* UserView.swift in Sources */,
 				47BF41122C8C6AD8006B1642 /* CreateUserHomeButton.swift in Sources */,
 				47F874C22C8A1792000DB7AB /* OnboardingViewTabView.swift in Sources */,
+				47BF412F2C8C9BC6006B1642 /* NotificationsViewModel.swift in Sources */,
 				47F874242C8A0EB3000DB7AB /* AppDelegate.swift in Sources */,
+				47BF412D2C8C9BC0006B1642 /* NotificationsView.swift in Sources */,
 				47F8747F2C8A103F000DB7AB /* DefaultsService.swift in Sources */,
 				47BF411B2C8C794E006B1642 /* FileManagerService.swift in Sources */,
 				47F874842C8A103F000DB7AB /* InputField.swift in Sources */,
@@ -681,6 +728,7 @@
 				47F8746C2C8A103F000DB7AB /* Date+Additions.swift in Sources */,
 				47BF41242C8C81F3006B1642 /* NextButtonView.swift in Sources */,
 				47BF41212C8C79B9006B1642 /* ProfileImagePickerView.swift in Sources */,
+				47BF412A2C8C95DA006B1642 /* SettingsButton.swift in Sources */,
 				47BF40EE2C8B4824006B1642 /* HomeViewModel.swift in Sources */,
 				47F8743D2C8A0FF9000DB7AB /* RootContentView.swift in Sources */,
 				47F874C42C8A1792000DB7AB /* PreloaderViewModel.swift in Sources */,

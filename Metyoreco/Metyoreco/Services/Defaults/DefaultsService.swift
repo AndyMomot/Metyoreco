@@ -36,6 +36,15 @@ extension DefaultsService {
             }
         }
     }
+    
+    static var isAllowedNotifications: Bool {
+        get {
+            return standard.bool(forKey: Keys.notifications.rawValue)
+        }
+        set {
+            standard.setValue(newValue, forKey: Keys.notifications.rawValue)
+        }
+    }
 }
 
 extension DefaultsService {
@@ -51,5 +60,6 @@ extension DefaultsService {
     enum Keys: String {
         case flow
         case user
+        case notifications
     }
 }
