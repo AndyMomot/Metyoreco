@@ -35,7 +35,7 @@ struct TabBarCustomView: View {
                         let item = items[index]
                         let isSelected = index == selectedItem
                         Button {
-                            
+                            selectedItem = index
                         } label: {
                             Image(item.imageName)
                                 .renderingMode(.template)
@@ -52,36 +52,6 @@ struct TabBarCustomView: View {
                 }
                 .padding(.horizontal, 40)
             }
-//        ZStack {
-//            RoundedRectangle(cornerRadius: 30)
-//                .overlay {
-//                    HStack {
-//                        ForEach(arrange, id: \.self) { index in
-//                            let item = items[index]
-//                            let isSelectedItem = index == selectedItem
-//                            let imageSize = bounds.width * 0.086
-//                            
-//                            Button {
-//                                selectedItem = index
-//                            } label: {
-//                                Image(item.imageName)
-//                                    .renderingMode(.template)
-//                                    .resizable()
-//                                    .scaledToFit()
-//                                    .frame(width: imageSize, height: imageSize)
-//                                    .padding()
-//                            }
-//                            
-//                            if index < arrange.count - 1 {
-//                                Spacer()
-//                                Divider()
-//                                Spacer()
-//                            }
-//                        }
-//                    }
-//                    .padding(.horizontal)
-//                }
-//        }
     }
 }
 

@@ -21,6 +21,21 @@ extension DefaultsService {
             standard.set(newValue.rawValue, forKey: Keys.flow.rawValue)
         }
     }
+    
+    static var user: UserModel? {
+        get {
+            if let data = standard.object(forKey: Keys.user.rawValue) as? Data {
+                let user = try? JSONDecoder().decode(UserModel.self, from: data)
+                return user
+            }
+            return nil
+        }
+        set {
+            if let data = try? JSONEncoder().encode(newValue) {
+                standard.setValue(data, forKey: Keys.user.rawValue)
+            }
+        }
+    }
 }
 
 extension DefaultsService {
@@ -35,5 +50,6 @@ extension DefaultsService {
 extension DefaultsService {
     enum Keys: String {
         case flow
+        case user
     }
 }

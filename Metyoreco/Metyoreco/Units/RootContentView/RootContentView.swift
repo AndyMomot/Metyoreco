@@ -20,7 +20,7 @@ struct RootContentView: View {
                     OnboardingViewTabView()
                         .environmentObject(viewModel)
                 case .main:
-                    Text("TabBar")
+                    TabBar()
                         .environmentObject(viewModel)
                 }
             }
@@ -29,6 +29,9 @@ struct RootContentView: View {
             withAnimation {
                 self.viewModel.getFlow()
             }
+        }
+        .onChange(of: viewModel.viewState) { value in
+            print(value.rawValue)
         }
     }
 }

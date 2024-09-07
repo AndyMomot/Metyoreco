@@ -12,13 +12,13 @@ struct TabBar: View {
     
     var body: some View {
         TabView(selection: $viewModel.selection) {
-            Text("1")
+            HomeView()
                 .tag(TabBarSelectionView.home.rawValue)
             
-            Text("2")
+            MusicView()
                 .tag(TabBarSelectionView.music.rawValue)
             
-            Text("3")
+            SettingsView()
                 .tag(TabBarSelectionView.settings.rawValue)
         }
         .edgesIgnoringSafeArea(.bottom)
