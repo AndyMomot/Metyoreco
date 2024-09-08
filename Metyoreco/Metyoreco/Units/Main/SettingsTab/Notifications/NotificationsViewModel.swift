@@ -30,8 +30,6 @@ extension NotificationsView {
             NotificationManager.shared.requestPermission { result in
                 switch result {
                 case .success(let isGranted):
-                    DefaultsService.isAllowedNotifications = isGranted
-                    
                     DispatchQueue.main.async { [weak self] in
                         guard let self else { return }
                         self.checkPermission()

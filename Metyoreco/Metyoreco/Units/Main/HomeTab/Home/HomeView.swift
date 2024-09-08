@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Binding var tabBarSelection: Int
     @StateObject private var viewModel = HomeViewModel()
     @EnvironmentObject private var rootViewModel: RootContentView.RootContentViewModel
     
@@ -38,7 +39,7 @@ struct HomeView: View {
                             }
                             
                             HomeButton(type: .createProject) {
-                                
+                                viewModel.showCreateProject.toggle()
                             }
                             HomeButton(type: .calculatingProfit) {
                                 
@@ -73,7 +74,13 @@ struct HomeView: View {
                             viewModel.getUser()
                         }
                     }
-                    .navigationBarBackButtonHidden()
+                }
+            }
+            .navigationDestination(isPresented: $viewModel.showCreateProject) {
+                CreateProjectView {
+                    withAnimation {
+                        tabBarSelection = TabBar.TabBarSelectionView.music.rawValue
+                    }
                 }
             }
         }
@@ -81,5 +88,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    HomeView(tabBarSelection: .constant(0))
 }

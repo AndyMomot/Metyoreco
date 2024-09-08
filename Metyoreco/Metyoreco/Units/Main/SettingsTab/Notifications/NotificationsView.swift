@@ -87,6 +87,7 @@ struct NotificationsView: View {
                 viewModel.checkPermission()
             }
         }
+        .navigationBarBackButtonHidden()
     }
 }
 

@@ -9,6 +9,12 @@ import Foundation
 
 extension MusicView {
     final class MusicViewModel: ObservableObject {
+        @Published var projects: [ProjectModel] = []
         
+        func getProjects() {
+            DispatchQueue.main.async { [weak self] in
+                self?.projects = DefaultsService.projects
+            }
+        }
     }
 }

@@ -12,7 +12,7 @@ struct TabBar: View {
     
     var body: some View {
         TabView(selection: $viewModel.selection) {
-            HomeView()
+            HomeView(tabBarSelection: $viewModel.selection)
                 .tag(TabBarSelectionView.home.rawValue)
             
             MusicView()
@@ -27,7 +27,6 @@ struct TabBar: View {
                 Spacer()
                 TabBarCustomView(selectedItem: $viewModel.selection)
                     .padding(.horizontal, 26)
-                    .offset(y: 10)
             }
         }
     }

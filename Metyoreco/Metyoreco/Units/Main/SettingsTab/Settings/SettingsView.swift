@@ -53,7 +53,6 @@ struct SettingsView: View {
             }
             .navigationDestination(isPresented: $viewModel.showNotificationSettings) {
                 NotificationsView()
-                    .navigationBarBackButtonHidden()
             }
         }
     }

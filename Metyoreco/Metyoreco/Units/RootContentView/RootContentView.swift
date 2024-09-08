@@ -30,9 +30,6 @@ struct RootContentView: View {
                 self.viewModel.getFlow()
             }
         }
-        .onChange(of: viewModel.viewState) { value in
-            print(value.rawValue)
-        }
     }
 }
 

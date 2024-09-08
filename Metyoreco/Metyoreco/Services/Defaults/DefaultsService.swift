@@ -37,12 +37,18 @@ extension DefaultsService {
         }
     }
     
-    static var isAllowedNotifications: Bool {
+    static var projects: [ProjectModel] {
         get {
-            return standard.bool(forKey: Keys.notifications.rawValue)
+            if let data = standard.object(forKey: Keys.projects.rawValue) as? Data {
+                let items = try? JSONDecoder().decode([ProjectModel].self, from: data)
+                return items ?? []
+            }
+            return []
         }
         set {
-            standard.setValue(newValue, forKey: Keys.notifications.rawValue)
+            if let data = try? JSONEncoder().encode(newValue) {
+                standard.setValue(data, forKey: Keys.projects.rawValue)
+            }
         }
     }
 }
@@ -60,6 +66,6 @@ extension DefaultsService {
     enum Keys: String {
         case flow
         case user
-        case notifications
+        case projects
     }
 }

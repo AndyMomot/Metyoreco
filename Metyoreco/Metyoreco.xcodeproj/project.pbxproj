@@ -29,6 +29,12 @@
 		47BF412D2C8C9BC0006B1642 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF412C2C8C9BC0006B1642 /* NotificationsView.swift */; };
 		47BF412F2C8C9BC6006B1642 /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF412E2C8C9BC6006B1642 /* NotificationsViewModel.swift */; };
 		47BF41322C8C9D69006B1642 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF41312C8C9D69006B1642 /* NotificationManager.swift */; };
+		47BF41352C8DB4A8006B1642 /* BackButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF41342C8DB4A8006B1642 /* BackButtonView.swift */; };
+		47BF41382C8DB68F006B1642 /* CreateProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF41372C8DB68F006B1642 /* CreateProjectView.swift */; };
+		47BF413A2C8DB694006B1642 /* CreateProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF41392C8DB694006B1642 /* CreateProjectViewModel.swift */; };
+		47BF413D2C8DBA89006B1642 /* DynamicHeightTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF413C2C8DBA89006B1642 /* DynamicHeightTextField.swift */; };
+		47BF41432C8DBC72006B1642 /* StepCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF41422C8DBC72006B1642 /* StepCounterView.swift */; };
+		47BF41452C8DBFF5006B1642 /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF41442C8DBFF5006B1642 /* ProjectModel.swift */; };
 		47F874242C8A0EB3000DB7AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F874232C8A0EB3000DB7AB /* AppDelegate.swift */; };
 		47F874262C8A0EB3000DB7AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F874252C8A0EB3000DB7AB /* SceneDelegate.swift */; };
 		47F874282C8A0EB3000DB7AB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F874272C8A0EB3000DB7AB /* RootViewController.swift */; };
@@ -105,6 +111,12 @@
 		47BF412C2C8C9BC0006B1642 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		47BF412E2C8C9BC6006B1642 /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
 		47BF41312C8C9D69006B1642 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		47BF41342C8DB4A8006B1642 /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
+		47BF41372C8DB68F006B1642 /* CreateProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectView.swift; sourceTree = "<group>"; };
+		47BF41392C8DB694006B1642 /* CreateProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProjectViewModel.swift; sourceTree = "<group>"; };
+		47BF413C2C8DBA89006B1642 /* DynamicHeightTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicHeightTextField.swift; sourceTree = "<group>"; };
+		47BF41422C8DBC72006B1642 /* StepCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCounterView.swift; sourceTree = "<group>"; };
+		47BF41442C8DBFF5006B1642 /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		47F874202C8A0EB3000DB7AB /* Metyoreco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metyoreco.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47F874232C8A0EB3000DB7AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47F874252C8A0EB3000DB7AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +198,7 @@
 			children = (
 				47BF41132C8C6D73006B1642 /* Home */,
 				47BF41142C8C6D84006B1642 /* CreateUser */,
+				47BF41362C8DB67D006B1642 /* CreateProject */,
 			);
 			path = HomeTab;
 			sourceTree = "<group>";
@@ -230,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				47BF410F2C8C68B4006B1642 /* UserModel.swift */,
+				47BF41442C8DBFF5006B1642 /* ProjectModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,6 +333,39 @@
 				47BF41312C8C9D69006B1642 /* NotificationManager.swift */,
 			);
 			path = NotificationManager;
+			sourceTree = "<group>";
+		};
+		47BF41332C8DB484006B1642 /* BackButton */ = {
+			isa = PBXGroup;
+			children = (
+				47BF41342C8DB4A8006B1642 /* BackButtonView.swift */,
+			);
+			path = BackButton;
+			sourceTree = "<group>";
+		};
+		47BF41362C8DB67D006B1642 /* CreateProject */ = {
+			isa = PBXGroup;
+			children = (
+				47BF41372C8DB68F006B1642 /* CreateProjectView.swift */,
+				47BF41392C8DB694006B1642 /* CreateProjectViewModel.swift */,
+			);
+			path = CreateProject;
+			sourceTree = "<group>";
+		};
+		47BF413B2C8DBA89006B1642 /* DynamicHeightTextField */ = {
+			isa = PBXGroup;
+			children = (
+				47BF413C2C8DBA89006B1642 /* DynamicHeightTextField.swift */,
+			);
+			path = DynamicHeightTextField;
+			sourceTree = "<group>";
+		};
+		47BF41412C8DBC6B006B1642 /* StepCounter */ = {
+			isa = PBXGroup;
+			children = (
+				47BF41422C8DBC72006B1642 /* StepCounterView.swift */,
+			);
+			path = StepCounter;
 			sourceTree = "<group>";
 		};
 		47F874172C8A0EB3000DB7AB = {
@@ -494,10 +541,13 @@
 		47F8745C2C8A103F000DB7AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				47BF41412C8DBC6B006B1642 /* StepCounter */,
+				47F874652C8A103F000DB7AB /* InputField */,
+				47BF413B2C8DBA89006B1642 /* DynamicHeightTextField */,
+				47BF41332C8DB484006B1642 /* BackButton */,
 				47BF41222C8C81DF006B1642 /* NextButton */,
 				47BF41082C8C632D006B1642 /* NavigationTitle */,
 				47F874612C8A103F000DB7AB /* WebView */,
-				47F874652C8A103F000DB7AB /* InputField */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -688,18 +738,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47BF413A2C8DB694006B1642 /* CreateProjectViewModel.swift in Sources */,
+				47BF41432C8DBC72006B1642 /* StepCounterView.swift in Sources */,
 				47BF40F32C8C5D6B006B1642 /* MusicViewModel.swift in Sources */,
 				47BF40EC2C8B481A006B1642 /* HomeView.swift in Sources */,
 				47BF41182C8C6DB6006B1642 /* CreateUserViewModel.swift in Sources */,
 				47F8743C2C8A0FF9000DB7AB /* RootContentViewModel.swift in Sources */,
 				47BF410D2C8C64F0006B1642 /* HomeButton.swift in Sources */,
 				47BF410A2C8C633E006B1642 /* NavigationTitleView.swift in Sources */,
+				47BF41382C8DB68F006B1642 /* CreateProjectView.swift in Sources */,
 				47BF41322C8C9D69006B1642 /* NotificationManager.swift in Sources */,
 				47F874282C8A0EB3000DB7AB /* RootViewController.swift in Sources */,
 				47F874C32C8A1792000DB7AB /* PreloaderView.swift in Sources */,
 				47F8746B2C8A103F000DB7AB /* Double+Additions.swift in Sources */,
 				47F8747D2C8A103F000DB7AB /* Strings.generated.swift in Sources */,
 				47BF41072C8C6326006B1642 /* UINavigationController+Additions.swift in Sources */,
+				47BF413D2C8DBA89006B1642 /* DynamicHeightTextField.swift in Sources */,
 				47BF41262C8C8BEF006B1642 /* UserView.swift in Sources */,
 				47BF41122C8C6AD8006B1642 /* CreateUserHomeButton.swift in Sources */,
 				47F874C22C8A1792000DB7AB /* OnboardingViewTabView.swift in Sources */,
@@ -709,7 +763,9 @@
 				47F8747F2C8A103F000DB7AB /* DefaultsService.swift in Sources */,
 				47BF411B2C8C794E006B1642 /* FileManagerService.swift in Sources */,
 				47F874842C8A103F000DB7AB /* InputField.swift in Sources */,
+				47BF41452C8DBFF5006B1642 /* ProjectModel.swift in Sources */,
 				47BF411E2C8C7967006B1642 /* ImagePicker.swift in Sources */,
+				47BF41352C8DB4A8006B1642 /* BackButtonView.swift in Sources */,
 				47F874C92C8A2641000DB7AB /* PrivacyPolicyView.swift in Sources */,
 				47F874C82C8A2641000DB7AB /* PrivacyPolicyViewModel.swift in Sources */,
 				47F874BD2C8A1792000DB7AB /* TabBar.swift in Sources */,

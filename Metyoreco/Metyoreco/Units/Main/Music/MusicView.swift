@@ -16,6 +16,19 @@ struct MusicView: View {
             Asset.homeBg.swiftUIImage
                 .resizable()
                 .ignoresSafeArea()
+            
+            ScrollView {
+                VStack {
+                    ForEach(viewModel.projects) { project in
+                        Text(project.name)
+                            .foregroundStyle(.white)
+                            .font(Fonts.MontserratAlternates.semiBold.swiftUIFont(size: 15))
+                    }
+                }
+            }
+        }
+        .onAppear {
+            viewModel.getProjects()
         }
     }
 }

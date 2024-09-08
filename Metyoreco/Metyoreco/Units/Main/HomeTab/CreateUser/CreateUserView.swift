@@ -54,6 +54,7 @@ struct CreateUserView: View {
                 .scrollIndicators(.never)
             }
         }
+        .hideKeyboardWhenTappedAround()
         .onAppear {
             withAnimation {
                 viewModel.setView(state: viewState)
@@ -74,6 +75,7 @@ struct CreateUserView: View {
                 viewModel.validateFields()
             }
         }
+        .navigationBarBackButtonHidden()
     }
 }
 

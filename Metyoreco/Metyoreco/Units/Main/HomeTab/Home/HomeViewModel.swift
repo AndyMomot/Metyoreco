@@ -10,8 +10,9 @@ import Foundation
 extension HomeView {
     final class HomeViewModel: ObservableObject {
         @Published var user: UserModel?
-        @Published var showCreateUser =  false
-        @Published var showEditUser =  false
+        @Published var showCreateUser = false
+        @Published var showEditUser = false
+        @Published var showCreateProject = false
         
         func getUser() {
             DispatchQueue.main.async { [weak self] in
