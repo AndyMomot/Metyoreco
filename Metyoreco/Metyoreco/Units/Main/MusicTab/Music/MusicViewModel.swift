@@ -13,7 +13,7 @@ extension MusicView {
         
         func getProjects() {
             DispatchQueue.main.async { [weak self] in
-                self?.projects = DefaultsService.projects
+                self?.projects = DefaultsService.projects.sorted(by: {$0.date > $1.date})
             }
         }
     }

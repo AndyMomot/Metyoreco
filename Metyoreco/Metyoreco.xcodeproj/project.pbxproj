@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47818FB12C90C731009B40D8 /* AddInstrumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47818FB02C90C731009B40D8 /* AddInstrumentView.swift */; };
+		47818FB32C90C738009B40D8 /* AddInstrumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47818FB22C90C738009B40D8 /* AddInstrumentViewModel.swift */; };
+		478DC81F2C90AAC50043AAED /* MusicAddUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DC81E2C90AAC50043AAED /* MusicAddUserView.swift */; };
+		478DC8212C90AD830043AAED /* MusicProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DC8202C90AD830043AAED /* MusicProjectCell.swift */; };
+		478DC8242C90B5E60043AAED /* ProjectDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DC8232C90B5E60043AAED /* ProjectDetailsView.swift */; };
+		478DC8262C90B5EC0043AAED /* ProjectDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DC8252C90B5EC0043AAED /* ProjectDetailsViewModel.swift */; };
+		478DC8292C90C1520043AAED /* InstrumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DC8282C90C1520043AAED /* InstrumentCell.swift */; };
 		47BF40EC2C8B481A006B1642 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF40EB2C8B481A006B1642 /* HomeView.swift */; };
 		47BF40EE2C8B4824006B1642 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF40ED2C8B4824006B1642 /* HomeViewModel.swift */; };
 		47BF40F12C8C5D63006B1642 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BF40F02C8C5D63006B1642 /* MusicView.swift */; };
@@ -89,6 +96,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47818FB02C90C731009B40D8 /* AddInstrumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInstrumentView.swift; sourceTree = "<group>"; };
+		47818FB22C90C738009B40D8 /* AddInstrumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInstrumentViewModel.swift; sourceTree = "<group>"; };
+		478DC81E2C90AAC50043AAED /* MusicAddUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAddUserView.swift; sourceTree = "<group>"; };
+		478DC8202C90AD830043AAED /* MusicProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicProjectCell.swift; sourceTree = "<group>"; };
+		478DC8232C90B5E60043AAED /* ProjectDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsView.swift; sourceTree = "<group>"; };
+		478DC8252C90B5EC0043AAED /* ProjectDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsViewModel.swift; sourceTree = "<group>"; };
+		478DC8282C90C1520043AAED /* InstrumentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentCell.swift; sourceTree = "<group>"; };
 		47BF40EB2C8B481A006B1642 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		47BF40ED2C8B4824006B1642 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		47BF40F02C8C5D63006B1642 /* MusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
@@ -183,11 +197,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47818FAF2C90C71A009B40D8 /* AddInstrument */ = {
+			isa = PBXGroup;
+			children = (
+				47818FB02C90C731009B40D8 /* AddInstrumentView.swift */,
+				47818FB22C90C738009B40D8 /* AddInstrumentViewModel.swift */,
+			);
+			path = AddInstrument;
+			sourceTree = "<group>";
+		};
+		478DC81C2C90A9530043AAED /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				478DC81D2C90AA9A0043AAED /* Views */,
+				47BF40F02C8C5D63006B1642 /* MusicView.swift */,
+				47BF40F22C8C5D6A006B1642 /* MusicViewModel.swift */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		478DC81D2C90AA9A0043AAED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				478DC81E2C90AAC50043AAED /* MusicAddUserView.swift */,
+				478DC8202C90AD830043AAED /* MusicProjectCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		478DC8222C90B5D30043AAED /* ProjectDetails */ = {
+			isa = PBXGroup;
+			children = (
+				478DC8272C90C1450043AAED /* Views */,
+				478DC8232C90B5E60043AAED /* ProjectDetailsView.swift */,
+				478DC8252C90B5EC0043AAED /* ProjectDetailsViewModel.swift */,
+			);
+			path = ProjectDetails;
+			sourceTree = "<group>";
+		};
+		478DC8272C90C1450043AAED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				478DC8282C90C1520043AAED /* InstrumentCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		47BF40E92C8B4801006B1642 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				47BF40EA2C8B4809006B1642 /* HomeTab */,
-				47BF40EF2C8C5D53006B1642 /* Music */,
+				47BF40EF2C8C5D53006B1642 /* MusicTab */,
 				47BF40F42C8C5F0A006B1642 /* SettingsTab */,
 			);
 			path = Main;
@@ -203,13 +263,14 @@
 			path = HomeTab;
 			sourceTree = "<group>";
 		};
-		47BF40EF2C8C5D53006B1642 /* Music */ = {
+		47BF40EF2C8C5D53006B1642 /* MusicTab */ = {
 			isa = PBXGroup;
 			children = (
-				47BF40F02C8C5D63006B1642 /* MusicView.swift */,
-				47BF40F22C8C5D6A006B1642 /* MusicViewModel.swift */,
+				478DC81C2C90A9530043AAED /* Music */,
+				478DC8222C90B5D30043AAED /* ProjectDetails */,
+				47818FAF2C90C71A009B40D8 /* AddInstrument */,
 			);
-			path = Music;
+			path = MusicTab;
 			sourceTree = "<group>";
 		};
 		47BF40F42C8C5F0A006B1642 /* SettingsTab */ = {
@@ -745,15 +806,19 @@
 				47BF41182C8C6DB6006B1642 /* CreateUserViewModel.swift in Sources */,
 				47F8743C2C8A0FF9000DB7AB /* RootContentViewModel.swift in Sources */,
 				47BF410D2C8C64F0006B1642 /* HomeButton.swift in Sources */,
+				478DC81F2C90AAC50043AAED /* MusicAddUserView.swift in Sources */,
 				47BF410A2C8C633E006B1642 /* NavigationTitleView.swift in Sources */,
 				47BF41382C8DB68F006B1642 /* CreateProjectView.swift in Sources */,
 				47BF41322C8C9D69006B1642 /* NotificationManager.swift in Sources */,
+				478DC8242C90B5E60043AAED /* ProjectDetailsView.swift in Sources */,
 				47F874282C8A0EB3000DB7AB /* RootViewController.swift in Sources */,
 				47F874C32C8A1792000DB7AB /* PreloaderView.swift in Sources */,
 				47F8746B2C8A103F000DB7AB /* Double+Additions.swift in Sources */,
 				47F8747D2C8A103F000DB7AB /* Strings.generated.swift in Sources */,
 				47BF41072C8C6326006B1642 /* UINavigationController+Additions.swift in Sources */,
+				478DC8262C90B5EC0043AAED /* ProjectDetailsViewModel.swift in Sources */,
 				47BF413D2C8DBA89006B1642 /* DynamicHeightTextField.swift in Sources */,
+				478DC8212C90AD830043AAED /* MusicProjectCell.swift in Sources */,
 				47BF41262C8C8BEF006B1642 /* UserView.swift in Sources */,
 				47BF41122C8C6AD8006B1642 /* CreateUserHomeButton.swift in Sources */,
 				47F874C22C8A1792000DB7AB /* OnboardingViewTabView.swift in Sources */,
@@ -765,13 +830,16 @@
 				47F874842C8A103F000DB7AB /* InputField.swift in Sources */,
 				47BF41452C8DBFF5006B1642 /* ProjectModel.swift in Sources */,
 				47BF411E2C8C7967006B1642 /* ImagePicker.swift in Sources */,
+				478DC8292C90C1520043AAED /* InstrumentCell.swift in Sources */,
 				47BF41352C8DB4A8006B1642 /* BackButtonView.swift in Sources */,
 				47F874C92C8A2641000DB7AB /* PrivacyPolicyView.swift in Sources */,
 				47F874C82C8A2641000DB7AB /* PrivacyPolicyViewModel.swift in Sources */,
+				47818FB32C90C738009B40D8 /* AddInstrumentViewModel.swift in Sources */,
 				47F874BD2C8A1792000DB7AB /* TabBar.swift in Sources */,
 				47F874822C8A103F000DB7AB /* SwiftUIViewWebView.swift in Sources */,
 				47BF40FA2C8C5F3E006B1642 /* SettingsViewModel.swift in Sources */,
 				47F874BE2C8A1792000DB7AB /* TabBarCustomView.swift in Sources */,
+				47818FB12C90C731009B40D8 /* AddInstrumentView.swift in Sources */,
 				47BF40F12C8C5D63006B1642 /* MusicView.swift in Sources */,
 				47F874722C8A103F000DB7AB /* Colors.generated.swift in Sources */,
 				47F874702C8A103F000DB7AB /* Images.generated.swift in Sources */,

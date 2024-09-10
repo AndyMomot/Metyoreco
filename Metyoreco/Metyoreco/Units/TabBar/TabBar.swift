@@ -15,7 +15,7 @@ struct TabBar: View {
             HomeView(tabBarSelection: $viewModel.selection)
                 .tag(TabBarSelectionView.home.rawValue)
             
-            MusicView()
+            MusicView(tabBarSelection:  $viewModel.selection)
                 .tag(TabBarSelectionView.music.rawValue)
             
             SettingsView()

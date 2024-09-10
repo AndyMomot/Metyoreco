@@ -31,6 +31,7 @@ internal enum Asset {
   internal static let dashedBg = ImageAsset(name: "dashedBg")
   internal static let download = ImageAsset(name: "download")
   internal static let edit = ImageAsset(name: "edit")
+  internal static let editButtonBg = ImageAsset(name: "editButtonBg")
   internal static let homeBg = ImageAsset(name: "homeBg")
   internal static let longButtonBg = ImageAsset(name: "longButtonBg")
   internal static let placeholder = ImageAsset(name: "placeholder")
