@@ -9,5 +9,5 @@ import Foundation
 
 struct UserModel: Codable, Identifiable {
     private(set) var id = UUID().uuidString
-    var fullName, email: String
+    var fullName: String
 }

@@ -13,7 +13,6 @@ extension CreateUserView {
         private var viewState: ViewState = .create
         @Published var image = UIImage()
         @Published var fullName = ""
-        @Published var email = ""
         @Published var isValidFields = false
         
         func setView(state: ViewState) {
@@ -28,7 +27,6 @@ extension CreateUserView {
                         self.image = image
                     }
                     self.fullName = model.fullName
-                    self.email = model.email
                     self.validateFields()
                 }
             }
@@ -36,7 +34,7 @@ extension CreateUserView {
         
         func validateFields() {
             let isValidImage = image != UIImage()
-            isValidFields = isValidImage && !fullName.isEmpty && !email.isEmpty
+            isValidFields = isValidImage && !fullName.isEmpty
         }
         
         func saveUser(completion: @escaping () -> Void) {
@@ -45,8 +43,7 @@ extension CreateUserView {
                 DispatchQueue.main.async { [weak self] in
                     guard let self else { return }
                     let newUser = UserModel(
-                        fullName: self.fullName,
-                        email: self.email
+                        fullName: self.fullName
                     )
                     
                     DefaultsService.user = newUser
@@ -57,7 +54,6 @@ extension CreateUserView {
                 DispatchQueue.main.async { [weak self] in
                     guard let self else { return }
                     model.fullName = self.fullName
-                    model.email = self.email
                     
                     DefaultsService.user = model
                     self.saveImage(image: self.image, to: model.id)

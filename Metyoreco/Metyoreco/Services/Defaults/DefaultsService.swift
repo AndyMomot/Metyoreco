@@ -51,6 +51,21 @@ extension DefaultsService {
             }
         }
     }
+    
+    static var incomeExpenditure: IncomeExpenditureModel? {
+        get {
+            if let data = standard.object(forKey: Keys.incomeExpenditure.rawValue) as? Data {
+                let model = try? JSONDecoder().decode(IncomeExpenditureModel.self, from: data)
+                return model
+            }
+            return nil
+        }
+        set {
+            if let data = try? JSONEncoder().encode(newValue) {
+                standard.setValue(data, forKey: Keys.incomeExpenditure.rawValue)
+            }
+        }
+    }
 }
 
 extension DefaultsService {
@@ -67,5 +82,6 @@ extension DefaultsService {
         case flow
         case user
         case projects
+        case incomeExpenditure
     }
 }

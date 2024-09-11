@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MusicProjectCell: View {
     var model: ProjectModel
-    var onEdit: () -> Void
     
     @State private var image: Image?
     
@@ -61,17 +60,13 @@ struct MusicProjectCell: View {
                         
                         Spacer()
                         
-                        Button {
-                            onEdit()
-                        } label: {
-                            Asset.shortButtonBg.swiftUIImage
-                                .resizable()
-                                .overlay {
-                                    Asset.edit.swiftUIImage
-                                }
-                                .frame(maxWidth: 44)
-                                .padding(.vertical, 9)
-                        }
+                        Asset.shortButtonBg.swiftUIImage
+                            .resizable()
+                            .overlay {
+                                Asset.edit.swiftUIImage
+                            }
+                            .frame(maxWidth: 44)
+                            .padding(.vertical, 9)
                     }
                     .padding(13)
                 }
@@ -105,7 +100,7 @@ private extension MusicProjectCell {
             notes: "Określ motyw przewodni piosenki. Jaka jest główna idea lub fabuła piosenki? Jakie emocje piosenka powinna wywołać u słuchacza?",
             budget: 1500,
             amountOfEquipment: 2
-        )) {}
+        ))
             .frame(height: 128)
     }
 }

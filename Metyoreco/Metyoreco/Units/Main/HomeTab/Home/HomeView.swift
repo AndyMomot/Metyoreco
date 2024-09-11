@@ -42,7 +42,7 @@ struct HomeView: View {
                                 viewModel.showCreateProject.toggle()
                             }
                             HomeButton(type: .calculatingProfit) {
-                                
+                                viewModel.showIncomeExpenditure.toggle()
                             }
                             HomeButton(type: .customers) {
                                 
@@ -82,6 +82,9 @@ struct HomeView: View {
                         tabBarSelection = TabBar.TabBarSelectionView.music.rawValue
                     }
                 }
+            }
+            .navigationDestination(isPresented: $viewModel.showIncomeExpenditure) {
+                IncomeExpenditureStatisticsView()
             }
         }
     }

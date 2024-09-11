@@ -25,6 +25,7 @@ internal enum Asset {
   internal static let buttonBg = ImageAsset(name: "buttonBg")
   internal static let calculatingProfit = ImageAsset(name: "calculatingProfit")
   internal static let cellBg = ImageAsset(name: "cellBg")
+  internal static let chartBg = ImageAsset(name: "chartBg")
   internal static let createProject = ImageAsset(name: "createProject")
   internal static let createUserBg = ImageAsset(name: "createUserBg")
   internal static let customers = ImageAsset(name: "customers")

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4775B78A2C9200270087D0E8 /* IncomeExpenditureStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4775B7892C9200270087D0E8 /* IncomeExpenditureStatisticsView.swift */; };
+		4775B78C2C92002D0087D0E8 /* IncomeExpenditureStatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4775B78B2C92002D0087D0E8 /* IncomeExpenditureStatisticsViewModel.swift */; };
+		4775B78E2C9200E40087D0E8 /* IncomeExpenditureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4775B78D2C9200E40087D0E8 /* IncomeExpenditureModel.swift */; };
+		4775B7912C92084D0087D0E8 /* BarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4775B7902C92084D0087D0E8 /* BarChart.swift */; };
 		47818FB12C90C731009B40D8 /* AddInstrumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47818FB02C90C731009B40D8 /* AddInstrumentView.swift */; };
 		47818FB32C90C738009B40D8 /* AddInstrumentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47818FB22C90C738009B40D8 /* AddInstrumentViewModel.swift */; };
 		478DC81F2C90AAC50043AAED /* MusicAddUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478DC81E2C90AAC50043AAED /* MusicAddUserView.swift */; };
@@ -96,6 +100,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4775B7892C9200270087D0E8 /* IncomeExpenditureStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenditureStatisticsView.swift; sourceTree = "<group>"; };
+		4775B78B2C92002D0087D0E8 /* IncomeExpenditureStatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenditureStatisticsViewModel.swift; sourceTree = "<group>"; };
+		4775B78D2C9200E40087D0E8 /* IncomeExpenditureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenditureModel.swift; sourceTree = "<group>"; };
+		4775B7902C92084D0087D0E8 /* BarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChart.swift; sourceTree = "<group>"; };
 		47818FB02C90C731009B40D8 /* AddInstrumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInstrumentView.swift; sourceTree = "<group>"; };
 		47818FB22C90C738009B40D8 /* AddInstrumentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInstrumentViewModel.swift; sourceTree = "<group>"; };
 		478DC81E2C90AAC50043AAED /* MusicAddUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicAddUserView.swift; sourceTree = "<group>"; };
@@ -197,6 +205,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4775B7882C91FFBC0087D0E8 /* IncomeExpenditure Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				4775B78F2C9208400087D0E8 /* Views */,
+				4775B7892C9200270087D0E8 /* IncomeExpenditureStatisticsView.swift */,
+				4775B78B2C92002D0087D0E8 /* IncomeExpenditureStatisticsViewModel.swift */,
+			);
+			path = "IncomeExpenditure Statistics";
+			sourceTree = "<group>";
+		};
+		4775B78F2C9208400087D0E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4775B7902C92084D0087D0E8 /* BarChart.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		47818FAF2C90C71A009B40D8 /* AddInstrument */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +285,7 @@
 				47BF41132C8C6D73006B1642 /* Home */,
 				47BF41142C8C6D84006B1642 /* CreateUser */,
 				47BF41362C8DB67D006B1642 /* CreateProject */,
+				4775B7882C91FFBC0087D0E8 /* IncomeExpenditure Statistics */,
 			);
 			path = HomeTab;
 			sourceTree = "<group>";
@@ -305,6 +332,7 @@
 			children = (
 				47BF410F2C8C68B4006B1642 /* UserModel.swift */,
 				47BF41442C8DBFF5006B1642 /* ProjectModel.swift */,
+				4775B78D2C9200E40087D0E8 /* IncomeExpenditureModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -815,6 +843,7 @@
 				47F874C32C8A1792000DB7AB /* PreloaderView.swift in Sources */,
 				47F8746B2C8A103F000DB7AB /* Double+Additions.swift in Sources */,
 				47F8747D2C8A103F000DB7AB /* Strings.generated.swift in Sources */,
+				4775B78E2C9200E40087D0E8 /* IncomeExpenditureModel.swift in Sources */,
 				47BF41072C8C6326006B1642 /* UINavigationController+Additions.swift in Sources */,
 				478DC8262C90B5EC0043AAED /* ProjectDetailsViewModel.swift in Sources */,
 				47BF413D2C8DBA89006B1642 /* DynamicHeightTextField.swift in Sources */,
@@ -831,12 +860,14 @@
 				47BF41452C8DBFF5006B1642 /* ProjectModel.swift in Sources */,
 				47BF411E2C8C7967006B1642 /* ImagePicker.swift in Sources */,
 				478DC8292C90C1520043AAED /* InstrumentCell.swift in Sources */,
+				4775B7912C92084D0087D0E8 /* BarChart.swift in Sources */,
 				47BF41352C8DB4A8006B1642 /* BackButtonView.swift in Sources */,
 				47F874C92C8A2641000DB7AB /* PrivacyPolicyView.swift in Sources */,
 				47F874C82C8A2641000DB7AB /* PrivacyPolicyViewModel.swift in Sources */,
 				47818FB32C90C738009B40D8 /* AddInstrumentViewModel.swift in Sources */,
 				47F874BD2C8A1792000DB7AB /* TabBar.swift in Sources */,
 				47F874822C8A103F000DB7AB /* SwiftUIViewWebView.swift in Sources */,
+				4775B78C2C92002D0087D0E8 /* IncomeExpenditureStatisticsViewModel.swift in Sources */,
 				47BF40FA2C8C5F3E006B1642 /* SettingsViewModel.swift in Sources */,
 				47F874BE2C8A1792000DB7AB /* TabBarCustomView.swift in Sources */,
 				47818FB12C90C731009B40D8 /* AddInstrumentView.swift in Sources */,
@@ -857,6 +888,7 @@
 				47F8743D2C8A0FF9000DB7AB /* RootContentView.swift in Sources */,
 				47F874C42C8A1792000DB7AB /* PreloaderViewModel.swift in Sources */,
 				47F874C12C8A1792000DB7AB /* OnboardingViewModel.swift in Sources */,
+				4775B78A2C9200270087D0E8 /* IncomeExpenditureStatisticsView.swift in Sources */,
 				47BF40F82C8C5F36006B1642 /* SettingsView.swift in Sources */,
 				47BF41102C8C68B4006B1642 /* UserModel.swift in Sources */,
 				47F874782C8A103F000DB7AB /* Fonts.generated.swift in Sources */,

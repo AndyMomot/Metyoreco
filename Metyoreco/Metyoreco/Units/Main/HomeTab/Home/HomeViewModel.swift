@@ -13,6 +13,7 @@ extension HomeView {
         @Published var showCreateUser = false
         @Published var showEditUser = false
         @Published var showCreateProject = false
+        @Published var showIncomeExpenditure = false
         
         func getUser() {
             DispatchQueue.main.async { [weak self] in

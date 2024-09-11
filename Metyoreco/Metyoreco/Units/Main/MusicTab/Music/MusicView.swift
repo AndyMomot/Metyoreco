@@ -42,11 +42,8 @@ struct MusicView: View {
                             } else {
                                 ForEach(viewModel.projects) { project in
                                     NavigationLink(value: project) {
-                                        MusicProjectCell(model: project) {
-                                            // on edit
-                                        }
+                                        MusicProjectCell(model: project)
                                     }
-                                    
                                 }
                             }
                         }

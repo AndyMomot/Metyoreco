@@ -33,10 +33,8 @@ struct CreateUserView: View {
                     VStack(spacing: 25) {
                         ProfileImagePickerView(uiImage: $viewModel.image)
                         
-                        InputField(title: "Imię Nazwisko", 
+                        InputField(title: "Imię/pseudonim",
                                    text: $viewModel.fullName)
-                        InputField(title: "Poczta",
-                                   text: $viewModel.email)
                         
                         NextButtonView(title: "Zapisz") {
                             viewModel.saveUser {
@@ -70,19 +68,13 @@ struct CreateUserView: View {
                 viewModel.validateFields()
             }
         }
-        .onChange(of: viewModel.email) { _ in
-            withAnimation {
-                viewModel.validateFields()
-            }
-        }
         .navigationBarBackButtonHidden()
     }
 }
 
 #Preview {
     CreateUserView(viewState: .update(
-        .init(fullName: "Ivan Ivanov",
-              email: "placeholder@gmail.com"))) {}
+        .init(fullName: "Ivan Ivanov"))) {}
     
 //    CreateUserView(viewState: .create) {}
 }

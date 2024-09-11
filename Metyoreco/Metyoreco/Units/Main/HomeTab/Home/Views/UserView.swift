@@ -36,14 +36,9 @@ struct UserView: View {
                             .clipShape(Circle())
                     }
                     
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text(model.fullName)
-                            .foregroundStyle(.white)
-                            .font(Fonts.MontserratAlternates.bold.swiftUIFont(size: 20))
-                        Text(model.email)
-                            .foregroundStyle(.white)
-                            .font(Fonts.MontserratAlternates.regular.swiftUIFont(size: 15))
-                    }
+                    Text(model.fullName)
+                        .foregroundStyle(.white)
+                        .font(Fonts.MontserratAlternates.bold.swiftUIFont(size: 20))
                     
                     Spacer()
                     
@@ -87,8 +82,7 @@ private extension UserView {
 
 #Preview {
     UserView(model: .init(
-        fullName: "Full name",
-        email: "user@gmail.com")
+        fullName: "Full name")
     ) {}
     .padding(.horizontal)
 }

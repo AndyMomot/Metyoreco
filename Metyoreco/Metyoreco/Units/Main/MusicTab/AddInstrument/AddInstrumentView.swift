@@ -19,10 +19,12 @@ struct AddInstrumentView: View {
     var body: some View {
         ZStack {
             Colors.deepSpaceBlue.swiftUIColor
-                .opacity(0.5)
+                .opacity(0.8)
             
             ScrollView {
                 VStack(spacing: 30) {
+                    Spacer(minLength: 100)
+                    
                     VStack(spacing: 15) {
                         HStack {
                             Spacer()
@@ -91,8 +93,9 @@ struct AddInstrumentView: View {
                     .padding(.top)
                     .opacity(viewModel.isValidFields ? 1 : 0.5)
                     .disabled(!viewModel.isValidFields)
+                    
+                    Spacer(minLength: 70)
                 }
-                .padding(.top)
                 .onAppear {
                     viewModel.setView(state: viewState)
                 }
