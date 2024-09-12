@@ -1,17 +1,17 @@
 //
-//  CreateUserView.swift
+//  AddClientView.swift
 //  Metyoreco
 //
-//  Created by Andrii Momot on 07.09.2024.
+//  Created by Andrii Momot on 12.09.2024.
 //
 
 import SwiftUI
 
-struct CreateUserView: View {
+struct AddClientView: View {
     var viewState: ViewState
     var onDismiss: () -> Void
     
-    @StateObject private var viewModel = CreateUserViewModel()
+    @StateObject private var viewModel = AddClientViewModel()
     @Environment(\.dismiss) private var dismiss
     
     var body: some View {
@@ -24,7 +24,7 @@ struct CreateUserView: View {
             
             VStack(spacing: 50) {
                 HStack {
-                    NavigationTitleView(text: "Autoryzacja")
+                    NavigationTitleView(text: "Tworzenie klienta")
                     Spacer()
                 }
                 .padding(.horizontal)
@@ -33,13 +33,23 @@ struct CreateUserView: View {
                     VStack(spacing: 25) {
                         ProfileImagePickerView(uiImage: $viewModel.image)
                         
-                        InputField(title: "Imię/pseudonim",
-                                   text: $viewModel.fullName)
+                        InputField(title: "Nazwa klienta",
+                                   text: $viewModel.name)
+                        
+                        DynamicHeightTextField(
+                            title: "Życzenia klienta",
+                            text: $viewModel.note)
+                        .frame(minHeight: 270)
+                        
+                        InputField(title: "Budżet klienta",
+                                   text: $viewModel.budget)
                         
                         NextButtonView(title: "Zapisz") {
-                            viewModel.saveUser {
-                                onDismiss()
-                                dismiss.callAsFunction()
+                            viewModel.saveClient(viewState: viewState) {
+                                DispatchQueue.main.async {
+                                    onDismiss()
+                                    dismiss.callAsFunction()
+                                }
                             }
                         }
                         .frame(maxHeight: 60)
@@ -48,10 +58,13 @@ struct CreateUserView: View {
                         .disabled(!viewModel.isValidFields)
                     }
                     .padding(.horizontal)
+                    
+                    Spacer(minLength: 70)
                 }
                 .scrollIndicators(.never)
             }
         }
+        .navigationBarBackButtonHidden()
         .hideKeyboardWhenTappedAround()
         .onAppear {
             DispatchQueue.main.async {
@@ -61,22 +74,22 @@ struct CreateUserView: View {
             }
         }
         .onChange(of: viewModel.image) { _ in
-            withAnimation {
-                viewModel.validateFields()
-            }
+            viewModel.validateFields()
         }
-        .onChange(of: viewModel.fullName) { _ in
-            withAnimation {
-                viewModel.validateFields()
-            }
+        .onChange(of: viewModel.name) { _ in
+            viewModel.validateFields()
         }
-        .navigationBarBackButtonHidden()
+        .onChange(of: viewModel.note) { _ in
+            viewModel.validateFields()
+        }
+        .onChange(of: viewModel.budget) { _ in
+            viewModel.validateFields()
+        }
     }
 }
 
 #Preview {
-    CreateUserView(viewState: .update(
-        .init(fullName: "Ivan Ivanov"))) {}
-    
-//    CreateUserView(viewState: .create) {}
+    AddClientView(viewState: .create) {
+        
+    }
 }

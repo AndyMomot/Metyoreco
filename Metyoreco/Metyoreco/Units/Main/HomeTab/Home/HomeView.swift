@@ -45,7 +45,7 @@ struct HomeView: View {
                                 viewModel.showIncomeExpenditure.toggle()
                             }
                             HomeButton(type: .customers) {
-                                
+                                viewModel.showClients.toggle()
                             }
                         }
                         .padding(.horizontal)
@@ -85,6 +85,9 @@ struct HomeView: View {
             }
             .navigationDestination(isPresented: $viewModel.showIncomeExpenditure) {
                 IncomeExpenditureStatisticsView()
+            }
+            .navigationDestination(isPresented: $viewModel.showClients) {
+                ClientsListView()
             }
         }
     }

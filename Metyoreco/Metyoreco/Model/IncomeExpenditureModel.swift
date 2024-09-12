@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct IncomeExpenditureModel: Codable {
     var income = 0
     var expenditure = 0

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4749379F2C93403D000D4E82 /* AddClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749379E2C93403D000D4E82 /* AddClientView.swift */; };
+		474937A12C934044000D4E82 /* AddClientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474937A02C934044000D4E82 /* AddClientViewModel.swift */; };
+		474937A32C934070000D4E82 /* ClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474937A22C934070000D4E82 /* ClientModel.swift */; };
+		474937A82C9344E9000D4E82 /* ClientsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474937A72C9344E9000D4E82 /* ClientsListView.swift */; };
+		474937AA2C9344EE000D4E82 /* ClientsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474937A92C9344EE000D4E82 /* ClientsListViewModel.swift */; };
+		474937AD2C9347E1000D4E82 /* ClientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474937AC2C9347E1000D4E82 /* ClientCell.swift */; };
+		474937B02C934CAF000D4E82 /* ClientInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474937AF2C934CAF000D4E82 /* ClientInfoView.swift */; };
+		474937B22C934CB5000D4E82 /* ClientInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474937B12C934CB5000D4E82 /* ClientInfoViewModel.swift */; };
 		4775B78A2C9200270087D0E8 /* IncomeExpenditureStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4775B7892C9200270087D0E8 /* IncomeExpenditureStatisticsView.swift */; };
 		4775B78C2C92002D0087D0E8 /* IncomeExpenditureStatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4775B78B2C92002D0087D0E8 /* IncomeExpenditureStatisticsViewModel.swift */; };
 		4775B78E2C9200E40087D0E8 /* IncomeExpenditureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4775B78D2C9200E40087D0E8 /* IncomeExpenditureModel.swift */; };
@@ -100,6 +108,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4749379E2C93403D000D4E82 /* AddClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClientView.swift; sourceTree = "<group>"; };
+		474937A02C934044000D4E82 /* AddClientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClientViewModel.swift; sourceTree = "<group>"; };
+		474937A22C934070000D4E82 /* ClientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModel.swift; sourceTree = "<group>"; };
+		474937A72C9344E9000D4E82 /* ClientsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsListView.swift; sourceTree = "<group>"; };
+		474937A92C9344EE000D4E82 /* ClientsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsListViewModel.swift; sourceTree = "<group>"; };
+		474937AC2C9347E1000D4E82 /* ClientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientCell.swift; sourceTree = "<group>"; };
+		474937AF2C934CAF000D4E82 /* ClientInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientInfoView.swift; sourceTree = "<group>"; };
+		474937B12C934CB5000D4E82 /* ClientInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientInfoViewModel.swift; sourceTree = "<group>"; };
 		4775B7892C9200270087D0E8 /* IncomeExpenditureStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenditureStatisticsView.swift; sourceTree = "<group>"; };
 		4775B78B2C92002D0087D0E8 /* IncomeExpenditureStatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenditureStatisticsViewModel.swift; sourceTree = "<group>"; };
 		4775B78D2C9200E40087D0E8 /* IncomeExpenditureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomeExpenditureModel.swift; sourceTree = "<group>"; };
@@ -205,6 +221,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4749379C2C934023000D4E82 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				474937A62C9344D4000D4E82 /* ClientsList */,
+				4749379D2C934030000D4E82 /* AddClient */,
+				474937AE2C934C9A000D4E82 /* ClientInfo */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		4749379D2C934030000D4E82 /* AddClient */ = {
+			isa = PBXGroup;
+			children = (
+				4749379E2C93403D000D4E82 /* AddClientView.swift */,
+				474937A02C934044000D4E82 /* AddClientViewModel.swift */,
+			);
+			path = AddClient;
+			sourceTree = "<group>";
+		};
+		474937A62C9344D4000D4E82 /* ClientsList */ = {
+			isa = PBXGroup;
+			children = (
+				474937AB2C9347CF000D4E82 /* Views */,
+				474937A72C9344E9000D4E82 /* ClientsListView.swift */,
+				474937A92C9344EE000D4E82 /* ClientsListViewModel.swift */,
+			);
+			path = ClientsList;
+			sourceTree = "<group>";
+		};
+		474937AB2C9347CF000D4E82 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				474937AC2C9347E1000D4E82 /* ClientCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		474937AE2C934C9A000D4E82 /* ClientInfo */ = {
+			isa = PBXGroup;
+			children = (
+				474937AF2C934CAF000D4E82 /* ClientInfoView.swift */,
+				474937B12C934CB5000D4E82 /* ClientInfoViewModel.swift */,
+			);
+			path = ClientInfo;
+			sourceTree = "<group>";
+		};
 		4775B7882C91FFBC0087D0E8 /* IncomeExpenditure Statistics */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +348,7 @@
 				47BF41142C8C6D84006B1642 /* CreateUser */,
 				47BF41362C8DB67D006B1642 /* CreateProject */,
 				4775B7882C91FFBC0087D0E8 /* IncomeExpenditure Statistics */,
+				4749379C2C934023000D4E82 /* Clients */,
 			);
 			path = HomeTab;
 			sourceTree = "<group>";
@@ -333,6 +396,7 @@
 				47BF410F2C8C68B4006B1642 /* UserModel.swift */,
 				47BF41442C8DBFF5006B1642 /* ProjectModel.swift */,
 				4775B78D2C9200E40087D0E8 /* IncomeExpenditureModel.swift */,
+				474937A22C934070000D4E82 /* ClientModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -828,6 +892,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47BF413A2C8DB694006B1642 /* CreateProjectViewModel.swift in Sources */,
+				4749379F2C93403D000D4E82 /* AddClientView.swift in Sources */,
 				47BF41432C8DBC72006B1642 /* StepCounterView.swift in Sources */,
 				47BF40F32C8C5D6B006B1642 /* MusicViewModel.swift in Sources */,
 				47BF40EC2C8B481A006B1642 /* HomeView.swift in Sources */,
@@ -842,6 +907,7 @@
 				47F874282C8A0EB3000DB7AB /* RootViewController.swift in Sources */,
 				47F874C32C8A1792000DB7AB /* PreloaderView.swift in Sources */,
 				47F8746B2C8A103F000DB7AB /* Double+Additions.swift in Sources */,
+				474937A32C934070000D4E82 /* ClientModel.swift in Sources */,
 				47F8747D2C8A103F000DB7AB /* Strings.generated.swift in Sources */,
 				4775B78E2C9200E40087D0E8 /* IncomeExpenditureModel.swift in Sources */,
 				47BF41072C8C6326006B1642 /* UINavigationController+Additions.swift in Sources */,
@@ -849,6 +915,7 @@
 				47BF413D2C8DBA89006B1642 /* DynamicHeightTextField.swift in Sources */,
 				478DC8212C90AD830043AAED /* MusicProjectCell.swift in Sources */,
 				47BF41262C8C8BEF006B1642 /* UserView.swift in Sources */,
+				474937AD2C9347E1000D4E82 /* ClientCell.swift in Sources */,
 				47BF41122C8C6AD8006B1642 /* CreateUserHomeButton.swift in Sources */,
 				47F874C22C8A1792000DB7AB /* OnboardingViewTabView.swift in Sources */,
 				47BF412F2C8C9BC6006B1642 /* NotificationsViewModel.swift in Sources */,
@@ -861,6 +928,7 @@
 				47BF411E2C8C7967006B1642 /* ImagePicker.swift in Sources */,
 				478DC8292C90C1520043AAED /* InstrumentCell.swift in Sources */,
 				4775B7912C92084D0087D0E8 /* BarChart.swift in Sources */,
+				474937B02C934CAF000D4E82 /* ClientInfoView.swift in Sources */,
 				47BF41352C8DB4A8006B1642 /* BackButtonView.swift in Sources */,
 				47F874C92C8A2641000DB7AB /* PrivacyPolicyView.swift in Sources */,
 				47F874C82C8A2641000DB7AB /* PrivacyPolicyViewModel.swift in Sources */,
@@ -876,6 +944,7 @@
 				47F874702C8A103F000DB7AB /* Images.generated.swift in Sources */,
 				47F8746D2C8A103F000DB7AB /* View+Additions.swift in Sources */,
 				47F874C02C8A1792000DB7AB /* OnboardingView.swift in Sources */,
+				474937AA2C9344EE000D4E82 /* ClientsListViewModel.swift in Sources */,
 				47F874BF2C8A1792000DB7AB /* TabBarViewModel.swift in Sources */,
 				47F8746E2C8A103F000DB7AB /* String+Additions.swift in Sources */,
 				47F874262C8A0EB3000DB7AB /* SceneDelegate.swift in Sources */,
@@ -886,10 +955,13 @@
 				47BF412A2C8C95DA006B1642 /* SettingsButton.swift in Sources */,
 				47BF40EE2C8B4824006B1642 /* HomeViewModel.swift in Sources */,
 				47F8743D2C8A0FF9000DB7AB /* RootContentView.swift in Sources */,
+				474937B22C934CB5000D4E82 /* ClientInfoViewModel.swift in Sources */,
 				47F874C42C8A1792000DB7AB /* PreloaderViewModel.swift in Sources */,
 				47F874C12C8A1792000DB7AB /* OnboardingViewModel.swift in Sources */,
 				4775B78A2C9200270087D0E8 /* IncomeExpenditureStatisticsView.swift in Sources */,
+				474937A82C9344E9000D4E82 /* ClientsListView.swift in Sources */,
 				47BF40F82C8C5F36006B1642 /* SettingsView.swift in Sources */,
+				474937A12C934044000D4E82 /* AddClientViewModel.swift in Sources */,
 				47BF41102C8C68B4006B1642 /* UserModel.swift in Sources */,
 				47F874782C8A103F000DB7AB /* Fonts.generated.swift in Sources */,
 			);

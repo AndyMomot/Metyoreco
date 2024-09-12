@@ -66,6 +66,21 @@ extension DefaultsService {
             }
         }
     }
+    
+    static var clients: [ClientModel] {
+        get {
+            if let data = standard.object(forKey: Keys.clients.rawValue) as? Data {
+                let items = try? JSONDecoder().decode([ClientModel].self, from: data)
+                return items ?? []
+            }
+            return []
+        }
+        set {
+            if let data = try? JSONEncoder().encode(newValue) {
+                standard.setValue(data, forKey: Keys.clients.rawValue)
+            }
+        }
+    }
 }
 
 extension DefaultsService {
@@ -83,5 +98,6 @@ extension DefaultsService {
         case user
         case projects
         case incomeExpenditure
+        case clients
     }
 }

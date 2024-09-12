@@ -97,7 +97,11 @@ struct AddInstrumentView: View {
                     Spacer(minLength: 70)
                 }
                 .onAppear {
-                    viewModel.setView(state: viewState)
+                    DispatchQueue.main.async {
+                        withAnimation {
+                            viewModel.setView(state: viewState)
+                        }
+                    }
                 }
                 .sheet(isPresented: $viewModel.showImagePicker) {
                     ImagePicker(selectedImage: $viewModel.image)
